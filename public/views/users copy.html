@@ -1,0 +1,83 @@
+<h1>Users</h1>
+
+<!-- edit/tambah user BEGIN-->
+<h2>{{editUserTitle}}</h2>
+<p>Enter Nim: <input type="text" ng-model="user.nim"></p>
+<p>Enter Nama: <input type="text" ng-model="user.nama"></p>
+
+
+<button type="submit" class="btn btn-primary" ng-click="tambah()" ng-show="!buttonupdate">
+   Tambah <i class="glyphicon glyphicon-plus"></i>
+</button>
+
+<button type="submit" class="btn btn-primary" ng-click="ubah(user)" ng-show="buttonupdate">
+   Ubah <i class="glyphicon glyphicon-edit"></i>
+</button>
+
+<button type="submit" class="btn btn-primary" ng-click="batal()" ng-show="buttonupdate">
+   Batal <i class="glyphicon glyphicon-refresh"></i>
+</button>
+<!-- edit/tambah user END-->
+
+
+<!-- LIST user -->
+<h2>List</h2>
+
+
+<p>
+masukan halaman: <input type="text" ng-model="currentPage">
+<input type="button" value="ok" class="btn btn-primary" ng-click="paging(currentPage)"/>
+</p>
+<p>
+
+<button type="submit" class="btn btn-primary" ng-click="pagingbefore()">
+  <i class="glyphicon glyphicon-chevron-left"></i> sebelum
+</button>
+
+<button type="submit" class="btn btn-primary" ng-click="pagingnext()">
+   sesudahnya <i class="glyphicon glyphicon-chevron-right"></i>
+</button>
+
+
+
+batas halaman (isi 3): {{jumlah}}
+</p>
+<table class="table table-hover">
+<thead><tr><td>Nim</td><td>Nama</td></tr></thead>
+<tbody ng-repeat='user in users'>
+	<tr>
+		<td>{{user.nim}}</td>
+		<td>{{user.nama}}</td>
+		<td><a href ng-click='hapus(user)'>hapus</a></td>
+		<td><a href ng-click='isiForm(user)'>update</a></td>
+	
+	</tr>
+</tbody>
+</table>
+
+
+ppppppppppp
+
+
+
+<div class="form-horizontal">
+
+        <div class="form-group field-loginform-username required">
+			<label class="col-lg-1 control-label" for="loginform-username">NIM</label>
+			<div class="col-lg-3"><input id="loginform-username" class="form-control" name="LoginForm[username]" type="text"></div>
+			<div class="col-lg-8"><p class="help-block help-block-error"></p></div>
+		</div>
+
+        <div class="form-group field-loginform-password required">
+			<label class="col-lg-1 control-label" for="loginform-password">Nama</label>
+			<div class="col-lg-3"><input id="loginform-password" class="form-control" name="LoginForm[password]" type="password"></div>
+			<div class="col-lg-8"><p class="help-block help-block-error"></p></div>
+		</div>
+       
+
+        <div class="form-group">
+            <div class="col-lg-offset-1 col-lg-11">
+                <button type="submit" class="btn btn-primary" name="login-button">Login</button>            </div>
+        </div>
+
+    </div>

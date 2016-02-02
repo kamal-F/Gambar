@@ -1,0 +1,26 @@
+<h1>{{isi}}</h1>
+<p>
+
+<div>
+<p>Terimakasih kepada Allah swt,
+DP2M Dikti,
+Politeknik Pos Indonesia
+</p>
+<p>
+<label>Simulator Rantai Pasok</label>
+<p>Pendahuluan bab 1</p>
+</div>
+<p>Web services</p>
+<pre><code>
+examples:
+curl --cookie-jar jarfile --data "username=admin&password=admin" http://localhost:3000/login
+curl --cookie jarfile "http://localhost:3000/users/list"
+curl --cookie jarfile  -H 'Content-Type: application/json' -XPUT "http://localhost:3000/users/update" -d '{"id":33,"nim": "9898","nama":"barang bagus"}'
+curl --cookie jarfile -i -H "Accept:application/json" -H "Content-Type:application/json" -XPOST "http://localhost:3000/users/delete" -d '{"nim": "7676","nama":"tujuh enam"}'
+curl --cookie jarfile -i -H "Accept:application/json" -H "Content-Type:application/json" -XDELETE "http://localhost:3000/users/delete/41"
+</code></pre>
+<p>setup server localhost:3000 menjadi gambar.bom:3000</p>
+<pre><code>
+install vhost, setup pada app.js
+					
+</code></pre>
