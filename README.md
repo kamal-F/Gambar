@@ -2,6 +2,7 @@
 
 # Gambar
 
+web aplikasi realtime utk memfasilitasi kolaborasi menggambar, engine utama sudah berjalan, silakan sesuaikan dengan bisnis proses anda
 
 
 ## Usage
